@@ -11,7 +11,7 @@ class Company < ActiveRecord::Base
 
    def self.oldest_company
       # Arctive Record style
-      Company.order(:founding_year)
+      Company.order(:founding_year).first
 
       # Ruby Style
       # Company.all.sort_by { |company| company.founding_year }.first
